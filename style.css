@@ -1,0 +1,129 @@
+*{
+    box-sizing: border-box;
+}
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Light-pink: hsl(275, 100%, 97%);
+    --Grayishpurple: hsl(292, 16%, 49%);
+    --Dark-purple: hsl(292, 42%, 14%);
+    --Purple:hsl(292, 78%, 41%);
+
+    --background:url("assets/images/background-pattern-mobile.svg");
+
+    --minus:url("assets/images/icon-minus.svg");
+    --plus:url("assets/images/icon-plus.svg");
+}
+
+body{
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    font-family: 'Work Sans';
+    font-size: 16px;
+    background: 
+        var(--background) no-repeat center top / 100% 30%, 
+        var(--Light-pink) 0 0;
+       
+}
+main{
+    border-radius:0.8rem;
+    padding: 1rem;
+    background-color: white;
+    margin-top:9rem;
+    bottom:auto;
+    max-width:22.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.title{
+    color:var(--Dark-purple);
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    font-size:2rem;
+    padding:0.5rem;
+    margin:0 0.5rem 0 0;
+    }
+h1{
+    font-size: 2rem;
+    font-weight: 700;
+    display:inline;
+    
+}
+button:hover{
+    color:var(--Purple);
+}
+
+h1,h2,p{
+    line-height: normal;
+}
+
+button{
+    border-bottom:solid gray 0.5px;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color:var(--Dark-purple);
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: left;
+    padding:0.5rem;
+    cursor:pointer;
+
+}
+
+ul li:last-child button{
+    border-bottom:none;
+}
+h2{
+    max-width: 85%;
+}
+p{
+    font-size:16px;
+    color:var(--Grayishpurple);
+    padding: 0.5rem;
+
+}
+.answer{
+    display:block;
+    background-color: white;
+}
+.hidden{
+    display:none;
+}
+.plus_icon{
+    width: 30px;
+	height: 30px;
+	background-size: cover;
+	background-repeat: no-repeat;
+    background-image: url("assets/images/icon-plus.svg");
+}
+
+.minus{
+    width: 30px;
+	height: 30px;
+	background-size: cover;
+	background-repeat: no-repeat;
+    background-image: url("assets/images/icon-minus.svg");
+}
+
+
+@media (min-width: 500) {
+    :root {
+        --background: url("assets/images/background-pattern-desktop.svg");
+    }
+
+
+    main {
+        width: 65%; /* Ancho en escritorio */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

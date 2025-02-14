@@ -5,7 +5,8 @@ options.forEach((option, index) => {
     option.addEventListener('click', () => {
         const answer = option.nextElementSibling;
         const icon = icons[index]; // Get the corresponding icon
-
+        const isExpanded = option.getAttribute('aria-expanded') === 'true'
+        option.setAttribute('aria-expanded', !isExpanded); // Toggle aria-expanded
         
         answer.classList.toggle('hidden'); // Toggle the hidden class
 
@@ -19,3 +20,5 @@ options.forEach((option, index) => {
 
     });
 });
+
+
